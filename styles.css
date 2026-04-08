@@ -1,0 +1,48 @@
+body{
+    --color1:#337A51; /* colors are defined in variables for the opportunity to change color palletes! */
+    --color2: #388659;
+    --color3: #459872;
+    --color4: #4A9B76;
+    --color5: #4E9D79;
+    --underline: #2A6543;
+    background-color: var(--color1);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    /* In the assignment its stated that these two lines are required, but I prefer the look of the website without them */
+    margin: 0 auto;
+    max-width: 800px; 
+
+}
+p{
+    color:black;
+}
+a{
+    color:black;
+    text-decoration: underline var(--underline);
+}
+h1:hover{
+    background-color: var(--color3);
+}
+h2:hover{
+    background-color: var(--color3);
+}
+h1, h2{
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--color2);
+    padding: 20px;
+}
+.box{
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--color3);
+    padding: 20px;
+}
+img{
+    border: groove var(--color5) 10px;
+    width: 320px;
+}
+#suddenlyweird{
+    color:darkgoldenrod;
+    font-family: cursive;
+}
