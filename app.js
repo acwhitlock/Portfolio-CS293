@@ -1,19 +1,23 @@
-// setTimeout(()=>{
-//     console.log('end')
-// },2000);
-const http = require("http");
-const fs = require("fs");
+// const http = require("http");
+// const fs = require("fs");
 
-const server = http.createServer((req, res) => {
-    fs.readFile("index.html", (err, data) => {
-        res.writeHead(200,{"Content-Type": "text/html"});
-        res.write(data);
-        res.end();
-    })
+// const server = http.createServer((req, res) => {
+//     fs.readFile("index.html", (err, data) => {
+//         res.writeHead(200,{"Content-Type": "text/html"});
+//         res.write(data);
+//         res.end();
+//     })
+
+// });
+
+// server.listen(3000, () => {
+//     console.log("Server running on http://localhost:3000");
+// })
+
+const express = require("express");
+const app = express();
+app.get("/",(req,res)=>{
+    res.send("Hello");
 
 });
-
-server.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
-})
-
+app.listen(3000);
