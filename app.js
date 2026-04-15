@@ -16,8 +16,15 @@
 
 const express = require("express");
 const app = express();
+const path = require("path")
 app.get("/",(req,res)=>{
-    res.send("Hello");
+    res.sendFile(path.join(__dirname,"index.html"));
 
 });
+
+// app.use(express.urlencoded({extended:false}));
+// app.post("/form",(req,res) => {
+//     res.send(req.body.name);
+// })
+
 app.listen(3000);
