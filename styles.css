@@ -4,6 +4,7 @@ body{
     --color3: #459872;
     --color4: #4A9B76;
     --color5: #4E9D79;
+    --textcolor:black;
     --underline: #2A6543;
     background-color: var(--color1);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -13,11 +14,26 @@ body{
     max-width: 800px; 
 
 }
+body.darkmode{
+    --color1:#337A51; 
+    --color2: #388659;
+    --color3: #459872;
+    --color4: #4A9B76;
+    --color5: #4E9D79;
+    --textcolor:black;
+    --underline: #2A6543;
+    background-color: var(--color1);
+    
+    /* In the assignment its stated that these two lines are required, but I prefer the look of the website without them */
+    margin: 0 auto;
+    max-width: 800px; 
+
+}
 p{
-    color:black;
+    color:var(--textcolor);
 }
 a{
-    color:black;
+    color:var(--textcolor);
     text-decoration: underline var(--underline);
 }
 h1:hover{
@@ -42,7 +58,4 @@ img{
     border: groove var(--color5) 10px;
     width: 320px;
 }
-#suddenlyweird{
-    color:darkgoldenrod;
-    font-family: cursive;
-}
+
