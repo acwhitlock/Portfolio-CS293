@@ -4,6 +4,12 @@
         <meta charset="UTF-8">
         <title>About - Amelia Whitlock</title>
         <link href="styles.css" rel="stylesheet">
+        <script>
+            if (localStorage.getItem('theme') == 'darkmode') {
+                document.body.classList.add('darkmode')
+            }
+        </script>
+        <script src="app.js"></script>    
     </head>
     <body>
         <table style="width: 100%;">
@@ -12,12 +18,6 @@
                 <th><h2><a href="projects.html">Projects</a></h2></th>
                 <th><h2><a href="contact.html">Contact</a></h2></th>
                 <th><h2 id = "toggle-dark-mode">Toggle Dark Mode</h2></th>
-                <script>
-                    const toggle = document.getElementById("toggle-dark-mode")
-                    toggle.addEventListener("click",()=>{
-                        document.body.classList.toggle("darkmode")
-                    })
-                </script>
             </tr>
         </table>
         <table>
@@ -44,5 +44,16 @@
         <footer>
             <p>&copy; 2026</p>
         </footer>
+        <script>
+            function toggleDarkMode(){
+              document.body.classList.toggle('darkmode');
+              if (document.body.classList.contains('darkmode')) {
+                localStorage.setItem('theme', 'darkmode');
+              } else {
+                localStorage.setItem('theme', 'lightmode');
+              }
+            }
+            document.getElementById('toggle-dark-mode').addEventListener('click', toggleDarkMode);
+        </script>
     </body>
 </html>

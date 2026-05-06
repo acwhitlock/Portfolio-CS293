@@ -48,12 +48,6 @@ h1, h2{
     background-color: var(--color2);
     padding: 20px;
 }
-.darkmode{
-    background-color: var(--color4);
-}
-.darkmode:hover{
-    background-color: var(--color2);
-}
 .box{
     width: fit-content;
     height: fit-content;
