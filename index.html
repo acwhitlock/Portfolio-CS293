@@ -34,9 +34,9 @@
                     </ul>
                 </td>
                 <td>
-                    <img src="portfolio_images/chainmail.HEIC" alt="A chainmail rhombus made with metal scales">
-                    <img src="portfolio_images/crochet.HEIC" alt="Two crochet amigurumi fighting over a cookie from the Bon">
-                    <img src="portfolio_images/knitting.HEIC" alt="A half-knitted sock with a leaf pattern">
+                    <button onclick="prev()">&lt;-</button>
+                    <img id="carousel-image" src="" alt="">
+                    <button onclick="next()">-&gt;</button>
                 </td>
             </tr>
         </table>
@@ -44,6 +44,7 @@
             <p>&copy; 2026</p>
         </footer>
         <script>
+            //----- Dark Mode Toggle -----
             function toggleDarkMode(){
                 document.documentElement.classList.toggle('darkmode');
                 if (document.documentElement.classList.contains('darkmode')) {
@@ -53,6 +54,34 @@
                 }
             }
             document.getElementById('toggle-dark-mode').addEventListener('click', toggleDarkMode);
+            
+            //----- Image Carousel -----
+            let images = [];
+            let num = 0;
+
+            fetch('image_info.json') // get image info from the json file
+            .then(response => response.json())
+            .then(data => {
+                images = data;
+                // once we get the images, put the first one in the carousel
+                const carousel = document.getElementById('carousel-image');
+                carousel.src = images[0].src;
+                carousel.alt = images[0].alt;
+            });
+
+            function next() {
+                num = (num + 1) % images.length; // '%' is so that it resets 
+                const carousel = document.getElementById('carousel-image');
+                carousel.src = images[num].src;
+                carousel.alt = images[num].alt; 
+            }
+
+            function prev() {
+                num = (num - 1 + images.length) % images.length;
+                const carousel = document.getElementById('carousel-image');
+                carousel.src = images[num].src;
+                carousel.alt = images[num].alt;            
+            }
         </script>
     </body>
 </html>
