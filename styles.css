@@ -52,4 +52,10 @@ img{
     border: groove var(--color5) 10px;
     width: 320px;
 }
+#carousel-image{
+    border: groove var(--color5) 10px;
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
 
