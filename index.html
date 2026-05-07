@@ -6,10 +6,9 @@
         <link href="styles.css" rel="stylesheet">
         <script>
             if (localStorage.getItem('theme') == 'darkmode') {
-                document.body.classList.add('darkmode')
+                document.documentElement.classList.add('darkmode')
             }
         </script>
-        <script src="app.js"></script>    
     </head>
     <body>
         <table style="width: 100%;">
@@ -17,7 +16,7 @@
                 <th><h1 class="box"><a href="index.html">Amelia Whitlock</a></h1></th>
                 <th><h2><a href="projects.html">Projects</a></h2></th>
                 <th><h2><a href="contact.html">Contact</a></h2></th>
-                <th><h2 id = "toggle-dark-mode">Toggle Dark Mode</h2></th>
+                <th><h2 id="toggle-dark-mode">Toggle Dark Mode</h2></th>
             </tr>
         </table>
         <table>
@@ -46,12 +45,12 @@
         </footer>
         <script>
             function toggleDarkMode(){
-              document.body.classList.toggle('darkmode');
-              if (document.body.classList.contains('darkmode')) {
-                localStorage.setItem('theme', 'darkmode');
-              } else {
-                localStorage.setItem('theme', 'lightmode');
-              }
+                document.documentElement.classList.toggle('darkmode');
+                if (document.documentElement.classList.contains('darkmode')) {
+                    localStorage.setItem('theme', 'darkmode');
+                } else {
+                    localStorage.setItem('theme', 'lightmode');
+                }
             }
             document.getElementById('toggle-dark-mode').addEventListener('click', toggleDarkMode);
         </script>

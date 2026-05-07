@@ -6,31 +6,22 @@ body{
     --color5: #4E9D79;
     --textcolor:black;
     --underline: #2A6543;
+
+    color:var(--textcolor);
     background-color: var(--color1);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
-    /* In the assignment its stated that these two lines are required, but I prefer the look of the website without them
-    margin: 0 auto;
-    max-width: 800px;  */
-
 }
-body.darkmode{
-    --color1:#337A51; 
-    --color2: #388659;
-    --color3: #459872;
-    --color4: #4A9B76;
-    --color5: #4E9D79;
+html.darkmode body{
+    --color1: #102719;
+    --color2: #122B1C;
+    --color3: #142F1F;
+    --color4: #163422;
+    --color5: #183925;
     --textcolor:white;
-    --underline: #2A6543;
-    background-color: var(--color1);
-    
-    /* In the assignment its stated that these two lines are required, but I prefer the look of the website without them
-    margin: 0 auto;
-    max-width: 800px;  */
+    --underline:#0F2317; 
 
-}
-p{
     color:var(--textcolor);
+    background-color: var(--color1);
 }
 a{
     color:var(--textcolor);
