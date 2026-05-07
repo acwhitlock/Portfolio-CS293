@@ -23,6 +23,9 @@ html.darkmode body{
     color:var(--textcolor);
     background-color: var(--color1);
 }
+html.darkmode img {
+    filter: brightness(75%) saturate(85%);
+}
 a{
     color:var(--textcolor);
     text-decoration: underline var(--underline);
