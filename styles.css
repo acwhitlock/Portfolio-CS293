@@ -58,4 +58,10 @@ img{
     height: 600px;
     object-fit: cover;
 }
-
+textarea {
+    background-color: var(--color3);
+    color: var(--textcolor);
+}
+textarea::placeholder {
+    color: var(--textcolor);
+}
